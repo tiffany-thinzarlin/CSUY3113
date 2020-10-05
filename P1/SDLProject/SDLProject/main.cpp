@@ -48,7 +48,7 @@ GLuint LoadTexture(const char* filePath) {
 
 void Initialize() {
     SDL_Init(SDL_INIT_VIDEO);
-    displayWindow = SDL_CreateWindow("tiff's first project!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
+    displayWindow = SDL_CreateWindow("my first project!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
     SDL_GL_MakeCurrent(displayWindow, context);
     
@@ -119,7 +119,7 @@ void Render() {
     program.SetModelMatrix(modelMatrix);
     
     
-        float vertices[]  = { -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5 };
+        float vertices[]  = { -1.0, 2.0, -0.5, 2.0, -1.0, -2.0, -0.5, 2.0, -0.5, 2.0, -1.0, -2.0 };
         float texCoords[] = { 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0 };
     
         glVertexAttribPointer(program.positionAttribute, 2, GL_FLOAT, false, 0, vertices);
