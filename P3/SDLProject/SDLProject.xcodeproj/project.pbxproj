@@ -15,6 +15,13 @@
 		DBDF1B692323DEEA007CECB1 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B662323DEEA007CECB1 /* SDL2.framework */; };
 		DBDF1B6A2323DEEA007CECB1 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B672323DEEA007CECB1 /* SDL2_image.framework */; };
 		DBDF1B6B2323DEEA007CECB1 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDF1B682323DEEA007CECB1 /* SDL2_mixer.framework */; };
+		F986C38B253B777A00C61F72 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F986C389253B777A00C61F72 /* Entity.cpp */; };
+		F986C38D253C169800C61F72 /* platformPack_tile001.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C38C253C166600C61F72 /* platformPack_tile001.png */; };
+		F986C38F253C186300C61F72 /* george_0.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C38E253C185E00C61F72 /* george_0.png */; };
+		F986C391253C19F000C61F72 /* platformPack_tile016.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C390253C19EC00C61F72 /* platformPack_tile016.png */; };
+		F986C393253C1B4500C61F72 /* platformPack_tile013.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C392253C1A4800C61F72 /* platformPack_tile013.png */; };
+		F986C395253C507F00C61F72 /* playerShip1_green.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C394253C4E5200C61F72 /* playerShip1_green.png */; };
+		F986C397253C54FD00C61F72 /* font1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F986C396253C54EE00C61F72 /* font1.png */; };
 		F9CF47A52517E5980014901F /* ctg.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F9CF47A42517E5490014901F /* ctg.png */; };
 		F9CF47A72517E6FC0014901F /* cat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = F9CF47A62517E6F20014901F /* cat.png */; };
 /* End PBXBuildFile section */
@@ -27,8 +34,14 @@
 			dstSubfolderSpec = 6;
 			files = (
 				DBDF1B612323DE9E007CECB1 /* shaders in CopyFiles */,
+				F986C397253C54FD00C61F72 /* font1.png in CopyFiles */,
+				F986C391253C19F000C61F72 /* platformPack_tile016.png in CopyFiles */,
 				F9CF47A52517E5980014901F /* ctg.png in CopyFiles */,
+				F986C395253C507F00C61F72 /* playerShip1_green.png in CopyFiles */,
+				F986C393253C1B4500C61F72 /* platformPack_tile013.png in CopyFiles */,
 				F9CF47A72517E6FC0014901F /* cat.png in CopyFiles */,
+				F986C38F253C186300C61F72 /* george_0.png in CopyFiles */,
+				F986C38D253C169800C61F72 /* platformPack_tile001.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +60,14 @@
 		DBDF1B662323DEEA007CECB1 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		DBDF1B672323DEEA007CECB1 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		DBDF1B682323DEEA007CECB1 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		F986C389253B777A00C61F72 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		F986C38A253B777A00C61F72 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		F986C38C253C166600C61F72 /* platformPack_tile001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platformPack_tile001.png; sourceTree = "<group>"; };
+		F986C38E253C185E00C61F72 /* george_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = george_0.png; sourceTree = "<group>"; };
+		F986C390253C19EC00C61F72 /* platformPack_tile016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platformPack_tile016.png; sourceTree = "<group>"; };
+		F986C392253C1A4800C61F72 /* platformPack_tile013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platformPack_tile013.png; sourceTree = "<group>"; };
+		F986C394253C4E5200C61F72 /* playerShip1_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip1_green.png; sourceTree = "<group>"; };
+		F986C396253C54EE00C61F72 /* font1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = font1.png; sourceTree = "<group>"; };
 		F9CF47A42517E5490014901F /* ctg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ctg.png; sourceTree = "<group>"; };
 		F9CF47A62517E6F20014901F /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,9 +113,17 @@
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,
 				DBDF1B5C2323DE8D007CECB1 /* shaders */,
 				F9CF47A42517E5490014901F /* ctg.png */,
+				F986C38C253C166600C61F72 /* platformPack_tile001.png */,
+				F986C394253C4E5200C61F72 /* playerShip1_green.png */,
+				F986C392253C1A4800C61F72 /* platformPack_tile013.png */,
+				F986C390253C19EC00C61F72 /* platformPack_tile016.png */,
+				F986C396253C54EE00C61F72 /* font1.png */,
+				F986C38E253C185E00C61F72 /* george_0.png */,
 				F9CF47A62517E6F20014901F /* cat.png */,
 				DBDF1B5A2323DE8D007CECB1 /* stb_image.h */,
 				DBDF1B522323DE3F007CECB1 /* main.cpp */,
+				F986C389253B777A00C61F72 /* Entity.cpp */,
+				F986C38A253B777A00C61F72 /* Entity.hpp */,
 			);
 			path = SDLProject;
 			sourceTree = "<group>";
@@ -168,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDF1B532323DE3F007CECB1 /* main.cpp in Sources */,
+				F986C38B253B777A00C61F72 /* Entity.cpp in Sources */,
 				DBDF1B5E2323DE8D007CECB1 /* ShaderProgram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
