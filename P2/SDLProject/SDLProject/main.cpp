@@ -5,6 +5,8 @@
 #endif
 
 #define GL_GLEXT_PROTOTYPES 1
+
+#include <SDL_mixer.h>
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include "glm/mat4x4.hpp"
@@ -36,6 +38,9 @@ float lastMovementY = 1.0f;
 
 GLuint playerTextureID;
 
+Mix_Music *music;
+Mix_Chunk *bounce;
+
 
 GLuint LoadTexture(const char* filePath) {
     int w, h, n;
@@ -56,6 +61,7 @@ GLuint LoadTexture(const char* filePath) {
  
 
 void Initialize() {
+    SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
     SDL_Init(SDL_INIT_VIDEO);
     displayWindow = SDL_CreateWindow("my second project!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
@@ -69,9 +75,14 @@ void Initialize() {
     
     program.Load("shaders/vertex_textured.glsl", "shaders/fragment_textured.glsl");
     
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    music = Mix_LoadMUS("dooblydoo.mp3");
+    Mix_PlayMusic(music, -1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 4);
+    
+    bounce = Mix_LoadWAV("bounce.wav");
+    
     viewMatrix = glm::mat4(1.0f);
-    //paddle1Matrix = glm::mat4(1.0f);
-    //paddle2Matrix = glm::mat4(1.0f);
 
     modelMatrix = glm::mat4(1.0f);
 
@@ -108,7 +119,7 @@ void Initialize() {
      state.ball->movement = glm::vec3(0);
      state.ball->speed = 1.0f;
     state.ball->textureID = LoadTexture("white_bar.png");
-
+    
 }
 
 void ProcessInput() {
@@ -196,21 +207,25 @@ void Update() {
         state.ball->movement.x = 1.0f;
         lastMovementX = 1.0f;
         state.ball->movement.y = lastMovementY;
+        Mix_PlayChannel(-1,bounce,0);
     }
     else if(xdist2<0 && ydist2<0){
         state.ball->movement.x = -1.0f;
         lastMovementX = -1.0f;
         state.ball->movement.y = lastMovementY;
+        Mix_PlayChannel(-1,bounce,0);
     }
     else if(state.ball->position[1]>=3.65){
         state.ball->movement.x = lastMovementX;
         state.ball->movement.y = -1.0f;
         lastMovementY = -1.0f;
+        Mix_PlayChannel(-1,bounce,0);
     }
     else if(state.ball->position[1]<=-3.65){
         state.ball->movement.x = lastMovementX;
         state.ball->movement.y = 1.0f;
         lastMovementY = 1.0f;
+        Mix_PlayChannel(-1,bounce,0);
     }
     else{
         state.ball->movement.x = lastMovementX;
